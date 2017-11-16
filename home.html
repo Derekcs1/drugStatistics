@@ -1,0 +1,39 @@
+ {% extends "layout.html" %}
+{% set active_Page = "extra"%}
+
+{% block title %} Extra Curricular {% endblock %}
+
+    <!--page content-->
+{% block content %}
+<link href="static/templateD.css" rel="stylesheet" type="text/css"></link>
+
+
+<div class="container-fluid bg-1 text-center">
+ <h3 class="margin">Introduction</h3>
+ <img src="{{url_for('static', filename='bear.jpg')}}" alt="board">class="img-responsive img-circle margin" style="display:inline" width="350" height="350">
+ <h3>This webpage is an overview of my extra curricular activities including sports, community service, and summer programs. </h3>
+</div>
+
+<div class="container-fluid bg-2 text-center">
+ <h3 class="margin">Sports</h3>
+<img src="{{url_for('static', filename='dive.png')}}" alt="flipp"> id="fimg" class="img-responsive img-rounded margin" style="display:inline" width="274" height="300">
+  <img src="{{url_for('static', filename='flip.png')}}" alt="air"> id="dimg" class="img-responsive img-rounded margin" style="display:inline" width="300" height="300">
+ <p>Throughout high school, I have participated in three different sports. Freshman year I participated in waterpolo, swim team, and dive. Dive really peaked my interest and I have been focusing on it exclusively ever since. I have been on the varisity team here at the highschool ever since sophmore year. I even won the channel league championships back to back, 10th and 11th grade, and as of senior year, I have been elected captain of the team.</p>
+</div>
+
+<div class="container-fluid bg-3 text-center">
+ <h3 class="margin">Community Service and Summer Programs</h3><br>
+ <div class="row">
+   <div class="col-sm-4">
+     <p>I have completed 160 community service hours in total, all of which have been completed at the same camp over the course of couple summers. The camp is called PeerBuddies, and it is a camp where you hang out with kids with mental and social disabilities and teach them things, and also just have fun with them. Through this program I have worked with kids with a variety of disabilities ranging from autism to just some fear of social interactions. Overall it has been a very interesting and valuable experience and I wouldn't have wanted to complete my hours any other way. </p>
+   </div>
+   <div class="col-sm-4">
+   <img src="{{url_for('static', filename='yale.jpg')}}" alt="school">class="img-responsive img-circle margin" style="display:inline" width="350" height="350">
+   </div>
+   <div class="col-sm-4">
+     <p>In the summer going in to my senior year, I accepted a nomination to attend the National Student Leadership Conference, and lived at Yale University for 10 days in the dorms, while learning about business and entrepenuership and leadership from acredited ivy league proffesors. This experience taught me many things about obviously business and leadership, but it has also given me valuable experience working with a team, and living in a college environment.</p>
+   </div>
+ </div>
+</div>
+
+{% endblock%}
