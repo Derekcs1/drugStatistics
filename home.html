@@ -1,33 +1,24 @@
-{% set active_Page = "extra"%}
-
-{% block title %} Test {% endblock %}
-
-    <!--page content-->
-{% block content %}
 <link href="main.css" rel="stylesheet" type="text/css"></link>
 
-
 <div class="container-fluid bg-1 text-center">
- <h3 class="margin">Test</h3>
- <img src="{{url_for('static', filename='bear.jpg')}}" alt="board">class="img-responsive img-circle margin" style="display:inline" width="350" height="350">
+ <h3 class="margin">Drug Usage in the World</h3>
  <h3> </h3>
 </div>
 
 <div class="container-fluid bg-2 text-center">
- <h3 class="margin">Test</h3>
-<img src="{{url_for('static', filename='dive.png')}}" alt="flipp"> id="fimg" class="img-responsive img-rounded margin" style="display:inline" width="274" height="300">
-  <img src="{{url_for('static', filename='flip.png')}}" alt="air"> id="dimg" class="img-responsive img-rounded margin" style="display:inline" width="300" height="300">
+ <h2 class="margin">Illicit drugs have been a continuous problem in the history of mankind and unfortunately have been growing in popularity in the last few decades. It has been found that a staggering 5% of people within the ages of 18-25 are dependent on some kind of illicit drug or drugs, and roughly 9% of those in this age group are active marijuana users. There are 26 million people in this age group who use illicit drugs just in the United States alone. It is clear that this is an epidemic within our society, and programs to assist those fighting the demons of their addictions are popping up everywhere and hopefully will stop the problem all together. Another issue is that of cigarettes. Cigarettes are extremely damaging and are unfortunately very popular. About 50% of the entire population of the world smokes cigarettes. This number is truly shocking and something needs to be done about this. </h3>
  <p></p>
 </div>
 
 <div class="container-fluid bg-3 text-center">
- <h3 class="margin">test</h3><br>
+ <h2 class="margin">Sources:
+     https://think.cs.vt.edu/corgis/json/drugs/drugs.html
+     https://www.drugabuse.gov/publications/drugfacts/nationwide-trends</h3><br>
  <div class="row">
    <div class="col-sm-4">
      <p> </p>
    </div>
    <div class="col-sm-4">
-   <img src="{{url_for('static', filename='yale.jpg')}}" alt="school">class="img-responsive img-circle margin" style="display:inline" width="350" height="350">
    </div>
    <div class="col-sm-4">
      <p></p>
@@ -35,4 +26,3 @@
  </div>
 </div>
 
-{% endblock%}
