@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title> State's Percentage of Marijuana Users </title>
+    </head>
+    <body>
+        <form action=".">
+          <select name="State">
+            {{ response_options }}
+          </select>
+          <br><br>
+          <input type="submit">
+      </form>
+      {% if response_state and marijuanaUse is defined %}
+        <p> In {{ response_state }}, {{ marijuanaUse }} percent of people use marijuana.</p>
+      {% endif %}
+    </body>
+</html>
