@@ -13,18 +13,26 @@ def render_main():
         return render_template('home.html', response_options = get_state_options(Rates), marijuanaUse = marijuanaUse(Rates, selected_state), response_state = selected_state)
     return render_template('home.html', response_options = get_state_options(Rates))
 
-def get_state_options(Rates):
+@app.route("/marijuanausage")
+def render_marijuana_usage():
+    with open('static/drugs.json') as drug_data:
+        data = json.load(drug_data)
+    if 'State' in request.args:
+        return render_template('marijuanausage.html', response_options = get_state_options(dict), response_state = request.args['State'], marijuana_use = marijuanaUse(dict, request.args['State']))
+    return render_template('marijuanausage.html', response_options = get_state_options(data))
+
+def get_state_options(dict):
     states = []
     options = ""
-    for c in Rates:
+    for c in dict:
         if c["State"] not in states:
             states.append(c["State"])
             options += Markup("<option value=\"" + c["State"] + "\">" + c["State"] + "</option>")
     return options
 
-def marijuanaUse(rates, selected_state):
+def marijuanaUse(dict, selected_state):
     marijuanaUse = 0
-    for c in counties:
+    for c in dict:
         if c["State"] == selected_state:
             marijuanaUse = c["Marijuana"]["18-25"]
     return str(marijuanaUse)
