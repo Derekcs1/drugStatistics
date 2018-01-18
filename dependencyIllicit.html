@@ -1,0 +1,58 @@
+<link href="main.css" rel="stylesheet" type="text/css"></link>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #222;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="file:///Users/admin/Desktop/drugStatistics/home.html">Information about the data</a></li>
+  <li><a href="file:///Users/admin/Desktop/drugStatistics/marijuanaUsage.html">State's percentage of marijuana users</a></li>
+  <li><a href="file:///Users/admin/Desktop/drugStatistics/dependencyIllicit.html">State's percentage of people dependent on illicit drugs</a></li>
+  <li><a href="file:///Users/admin/Desktop/drugStatistics/StatisticsandGraphs.html">Statistics and graphs</a></li>
+</ul>
+
+
+<html>
+    <head>
+        <title> State's Percentage of Marijuana Users </title>
+    </head>
+    <body>
+        <form action=".">
+          <select name="State">
+            {{ response_options }}
+          </select>
+          <br><br>
+          <input type="submit">
+      </form>
+      {% if response_state and marijuanaUse is defined %}
+        <p> In {{ response_state }}, {{ marijuanaUse }} percent of people use marijuana.</p>
+      {% endif %}
+    </body>
+</html>
