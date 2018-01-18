@@ -41,7 +41,7 @@ li a:hover {
 
 <html>
     <head>
-        <title> State's Percentage of Marijuana Users </title>
+        <title> State % of illicit drug users </title>
     </head>
     <body>
         <form action=".">
@@ -51,8 +51,8 @@ li a:hover {
           <br><br>
           <input type="submit">
       </form>
-      {% if response_state and marijuanaUse is defined %}
-        <p> In {{ response_state }}, {{ marijuanaUse }} percent of people use marijuana.</p>
+      {% if response_state and percentAbuse is defined %}
+        <p> In {{ response_state }}, {{ percentAbuse }} percent of people abuse drugs </p>
       {% endif %}
     </body>
 </html>
